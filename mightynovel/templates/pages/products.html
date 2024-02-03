@@ -1,0 +1,68 @@
+<!-- template.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="products">
+    <div class="products-cntr">
+        <div class="products-head">
+            <a href="" class="flex flex-col">
+                <span class="category">ROMANCE</span>
+                <span class="category-description">Navigate the twists of love, where emotions collide and hearts entwine in a captivating dance.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">FANTASY</span>
+                <span class="category-description">Embark on a magical odyssey where mythical realms unfold, heroes rise, and destiny awaits.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">ACTION</span>
+                <span class="category-description">Thrill to epic battles, where skills are tested, and the line between victory and defeat blurs.
+
+</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">COMEDY</span>
+                <span class="category-description">Laugh through life's absurdities in a joy-filled journey of humor and delightful madness.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">DRAMA</span>
+                <span class="category-description">Explore the depths of human emotion as characters navigate personal struggles and triumphs.</span>
+            </a>
+        </div>
+
+ <div class="products">
+     <h2 style="text-align: center; font-weight: bold; font-size:50px">Novel List</h2>
+    <div class="products-cntr">
+        <div class="products-main items-start justify-center">
+
+            <div class="novel-list" style="display: flex; flex-wrap: wrap; gap: 20px; text-align: center;">
+                {% for novel in novels %}
+                    <div class="novel-card" style="flex: 1; box-sizing: border-box; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                       <p style="font-weight: bold;">
+                            {{ novel.title }}
+                        </p>
+                        <p style="margin-top: 5px;">Author: {{ novel.author }}</p>
+                        <p>Description: {{ novel.description }}</p>
+                        <p>Genre: {{ novel.genre }}</p>
+                        <p>Price: ${{ novel.price }}</p>
+                          <a href="{% url 'novel_detail' pk=novel.pk %}" style="text-decoration: none; color: blue; font-weight: bold; font-size: 18px; display: block; text-align: center;">
+                          View</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

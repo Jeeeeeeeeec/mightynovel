@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ form_title }}</h2>
+<style>
+.form-container h2 {
+  color: #333;
+}
+
+.form-container form {
+  margin-top: 20px;
+}
+
+.form-container button.btn-save {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button.btn-save:hover {
+  background-color: #0056b3;
+}
+</style>
+
+<div class="products">
+    <div class="products-cntr">
+        <div class="products-head">
+            <a href="" class="flex flex-col">
+                <span class="category">ROMANCE</span>
+                <span class="category-description">Navigate the twists of love, where emotions collide and hearts entwine in a captivating dance.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">FANTASY</span>
+                <span class="category-description">Embark on a magical odyssey where mythical realms unfold, heroes rise, and destiny awaits.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">ACTION</span>
+                <span class="category-description">Thrill to epic battles, where skills are tested, and the line between victory and defeat blurs.
+
+</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">COMEDY</span>
+                <span class="category-description">Laugh through life's absurdities in a joy-filled journey of humor and delightful madness.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">DRAMA</span>
+                <span class="category-description">Explore the depths of human emotion as characters navigate personal struggles and triumphs.</span>
+            </a>
+        </div>
+  <form method="post" enctype="multipart/form-data" style=" max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); ">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"  style=" background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer; items-start justify-center;">Save</button>
+  </form>
+{% endblock %}

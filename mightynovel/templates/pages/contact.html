@@ -1,0 +1,25 @@
+
+  {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contact" style="background-color: black;">
+    <div class="contact-cntr flex flex-row items-center">
+        <div class="text-cntr flex flex-col space-y-6" style="margin: 20px; padding: 40px; border-radius: 15px; background-color: rgba(0, 0, 0, 0.3); width: 80%;">
+            <span><h1 class="great text-5x2" style="color:white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">You Can Contact Us at:</h1></span>
+            <span class="block text-3xl md:text-5xl lg:text-6xl" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); line-height: 1.5; font-family: 'Pixelify Sans', sans-serif;">
+                Facebook: Jerico Butlig
+                <br>
+                Facebook: Rannie Mananquil
+                <br>
+            </span>
+        </div>
+    </div>
+    <div class="image-cntr flex flex-row items-center justify-center">
+        <img src="{% static 'images/cover-bg.jpg' %}" alt="" class="model">
+    </div>
+</div>
+
+{% endblock %}
+
+

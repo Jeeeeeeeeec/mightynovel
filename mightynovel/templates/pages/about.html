@@ -1,0 +1,21 @@
+ {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="about background-color: black;">
+    <div class="about-cntr flex flex-row items-center">
+        <div class="text-cntr flex flex-col space-y-6">
+            <span><h1 class="great text-5x2" style="color:white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">About Mighty Novel</h1></span>
+    <span class="block text-3xl md:text-5xl lg:text-6xl" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); line-height: 1.5; font-family: 'Pixelify Sans', sans-serif; background-color: rgba(0, 0, 0, 0.3); padding: 40px; border-radius: 10px; width: 100%;">
+    Here in Mighty Novel our mission is to curate a collection of novels that resonate with readers from all walks of life. Whether you're a fan of thrilling mysteries, heartwarming romances, or epic fantasies, we have a story for you.
+</span>
+
+
+        </div>
+    </div>
+    <div class="image-cntr flex flex-row items-center justify-center ">
+        <img src="{% static 'images/cover-bg.jpg' %}" alt="" class="model">
+    </div>
+</div>
+{% endblock %}
+

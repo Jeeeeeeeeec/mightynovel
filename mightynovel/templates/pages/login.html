@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login" style="background-color: black;">
+    <div class="login-cntr flex flex-row items-center justify-center">
+        <form action="" class="flex flex-col items-center justify-center space-y-4">
+            <div class="logo flex  items-center justify-center">
+                <span class="great text-5xl" style="color: white;">Login</span>
+            </div>
+            <div class="flex flex-col space-y-1" style="color: white;">
+                <label for="">Email</label>
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="flex flex-col space-y-1" style="color: white;">
+                <label for="">Password</label>
+                <input type="text" placeholder="Password">
+            </div>
+            <div class="flex flex-row ">
+                <button>
+                    Login
+                </button>
+            </div>
+            <div>
+                <a href="{% url 'signup' %}">Create Account</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

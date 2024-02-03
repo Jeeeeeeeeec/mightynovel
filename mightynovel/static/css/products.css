@@ -1,0 +1,128 @@
+.products {
+    width: 100%;
+    background-color: white;
+}
+
+.products-cntr {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.products-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.products-head a {
+    width: 100%;
+    border: 1px solid rgb(209 213 219);
+    padding: 24px;
+}
+
+.products-head a .category {
+    font-weight: bolder;
+}
+
+.products-head a .category-description {
+    font-weight: lighter;
+}
+
+.products-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.products-main .card {
+    width: 300px;
+    padding: 16px;
+    /* background-color: white; */
+    border: 1px solid rgb(229 231 235);
+
+}
+
+.products-main .card img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 6px;
+}
+
+.products-main .card .price {
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 6px;
+    color: red;
+}
+
+.products-main .card .name {
+    font-size: medium;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.products-main .card .description {
+    font-size:medium;
+    font-weight: lighter;
+    margin-bottom: 6px;
+}
+
+.products-main .card .details {
+    width: 100%;
+}
+
+.product-detail {
+    border: 1px solid black;
+    color: red;
+}
+
+.products-main .card .details .icon-cntr {
+    background-color: black;
+}
+
+.products-main .card .details .icon {
+    color: white;
+}
+
+.products-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-main h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;  /* Adjust the color as needed */
+}
+
+.products-main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products-main li {
+  margin-bottom: 10px;
+}
+
+.products-main a {
+  text-decoration: none;
+  color: #007BFF;  /* Adjust the color as needed */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.products-main a:hover {
+  color: #0056b3;  /* Adjust the color as needed */
+}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/novel_detail.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="products">
+    <div class="products-cntr">
+        <div class="products-head">
+            <a href="" class="flex flex-col">
+                <span class="category">ROMANCE</span>
+                <span class="category-description">Navigate the twists of love, where emotions collide and hearts entwine in a captivating dance.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">FANTASY</span>
+                <span class="category-description">Embark on a magical odyssey where mythical realms unfold, heroes rise, and destiny awaits.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">ACTION</span>
+                <span class="category-description">Thrill to epic battles, where skills are tested, and the line between victory and defeat blurs.
+
+</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">COMEDY</span>
+                <span class="category-description">Laugh through life's absurdities in a joy-filled journey of humor and delightful madness.</span>
+            </a>
+            <a href="" class="flex flex-col">
+                <span class="category">DRAMA</span>
+                <span class="category-description">Explore the depths of human emotion as characters navigate personal struggles and triumphs.</span>
+            </a>
+        </div>
+  <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
+    <div class="product-detail" style="background-color: #fff; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 400px; width: 100%; text-align: center;">
+        <div class="product-detail-cntr">
+            <div class="product-detail-main items-start justify-center">
+                <div class="card" style="color: black;">
+                    <h2>Title: {{ novel.title }}</h2>
+                    <p>Description: {{ novel.description }}</p>
+                    <p>Author: {{ novel.author }}</p>
+                    <p>Genre: {{ novel.genre }}</p>
+                    <p>Price: ${{ novel.price }}</p>
+                </div>
+                <a href="{% url 'novel_edit' pk=novel.pk %}" class="edit" style="color: blue;">Edit</a>
+                 <form method="post" action="{% url 'novel_confirm_delete' pk=novel.pk %}" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="delete" style="color: red; border: none; background: none; cursor: pointer;">Delete</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

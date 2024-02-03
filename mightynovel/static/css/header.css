@@ -1,0 +1,70 @@
+.header {
+    width: 100%;
+    position: fixed;
+    background: black;
+    z-index: 10;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-scroll {
+    width: 100%;
+    position: fixed;
+    background: none;
+    z-index: 10;
+    background-color: black;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(209 213 219);
+}
+
+.header-cntr {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.header .logo span,
+.header-scroll .logo span {
+    color: #00494F;
+}
+
+
+
+nav ul li {
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+
+nav ul li a {
+    color: #ffffff; /* Change to white */
+    transition: color 0.3s ease; /* Add transition for smooth effect */
+
+}
+
+nav ul li a:hover {
+    background-color: red; /* Change to the desired hover background color */
+    color: black; /* Change to the desired hover text color */
+
+}
+
+
+.auth .login-btn,
+.auth .sign-up {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: white;
+}
+
+.auth .login-btn:hover {
+    background-color: red; /* Change to the desired hover background color */
+    color: black; /* Change to the desired hover text color */
+}
+
+.auth .sign-up:hover {
+    background-color: red; /* Change to the desired hover background color */
+    color: black; /* Change to the desired hover text color */
+    border-color: #00bcd4; /* Change to the desired hover border color */
+}
+
+

@@ -1,0 +1,45 @@
+{% load static %}
+
+<div id="header" class="header z-10">
+    <div class="header-cntr flex items-center justify-between">
+        <div class="logo">
+            <span><img src="{% static 'images/5.png' %}" alt="Logo" width="130" height="30"></span>
+        </div>
+
+        <nav>
+            <ul class="flex flex-row items-center">
+                <li>
+                    <a href="{% url 'home' %}" class="text-lg px-4 py-2" style=" font-family: 'Pixelify Sans', sans-serif;">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}" class="text-lg px-4 py-2" style=" font-family: 'Pixelify Sans', sans-serif;">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'products' %}" class="text-lg px-4 py-2" style=" font-family: 'Pixelify Sans', sans-serif;">Novels</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}" class="text-lg px-4 py-2" style=" font-family: 'Pixelify Sans', sans-serif;">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="auth flex flex-row items-center">
+            <a href="{% url 'add_novel' %}" class="login-btn px-4 py-2" style=" font-family: 'Pixelify Sans', sans-serif;">Add Novels</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        const header = document.getElementById('header');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            header.classList.remove('header');
+            header.classList.add('header-scroll');
+        } else {
+            header.classList.add('header');
+            header.classList.remove('header-scroll');
+        }
+    }
+</script>

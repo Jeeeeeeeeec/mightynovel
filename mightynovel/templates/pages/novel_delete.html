@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/novel_delete.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="delete-novel">
+        <h2>Delete Novel</h2>
+        <p>Are you sure you want to delete "{{ novel.title }}"?</p>
+        <form method="post" class="delete-form">
+            {% csrf_token %}
+            <button type="submit">Yes, delete</button>
+        </form>
+        <a href="{% url 'novel_detail' pk=novel.pk %}" class="cancel">Cancel</a>
+    </div>
+{% endblock %}

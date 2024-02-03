@@ -1,0 +1,17 @@
+ {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home hero-pattern">
+    <div class="home-cntr flex flex-row items-center">
+        <div class="text-cntr flex flex-col space-y-6">
+            <span class="text-5x2" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Embark on a Literary Journey with Mighty Novel!</span>
+            <a href="{% url 'products' %}" class="explore-link" style=" font-family: 'Pixelify Sans', sans-serif;">EXPLORE NOVELS</a>
+        </div>
+    </div>
+    <div class="image-cntr flex flex-row items-center justify-center ">
+        <img src="{% static 'images/coveer.jpg' %}" alt="" class="model">
+    </div>
+</div>
+{% endblock %}
+
